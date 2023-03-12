@@ -5,17 +5,19 @@ import {FaUserSecret} from 'react-icons/fa'
 import {ImBook} from 'react-icons/im'
 import {MdElectricalServices} from 'react-icons/md'
 import {AiFillContacts} from 'react-icons/ai'
+import { useState} from 'react'
 
 
 const Nav = () => { 
+  const[activeNav, setActiveNav] = useState('#')
   return (
-    <div>
-      <a href="#" ><AiTwotoneHome/></a>
-      <a href="#" ><FaUserSecret/></a>
-      <a href="#" ><ImBook/></a>
-      <a href="#" ><MdElectricalServices/></a>
-      <a href="#" ><AiFillContacts/></a>
-    </div>
+    <nav>
+      <a href="#"  onClick={()=> setActiveNav('#')} className={activeNav === '#' ? 'active' : ''} ><AiTwotoneHome/></a>
+      <a href="#about" onClick={()=> setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''} ><FaUserSecret/></a>
+      <a href="#experience" onClick={()=> setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><ImBook/></a>
+      <a href="#footer" onClick={()=> setActiveNav('#footer')} className={activeNav === '#footer' ? 'active' : ''}><MdElectricalServices/></a>
+      <a href="#contact" onClick={()=> setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><AiFillContacts/></a>
+    </nav>
   )
 }
 
