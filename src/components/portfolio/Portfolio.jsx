@@ -7,6 +7,51 @@ import IMG4 from '../../assets/portfolio2.png'
 import IMG5 from '../../assets/portfolio2.png'
 import IMG6 from '../../assets/portfolio2.png'
 
+const data = [
+  {
+    id: 1,
+    image: IMG1,
+    title: 'Ecommerce website for smartphones',
+    github: 'https://github.com/ishan-web/ecommerce',
+    demo: 'https://github.com/ishan-web/ecommerce',
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: 'Ecommerce website for smartphones',
+    github: 'https://github.com/ishan-web/ecommerce',
+    demo: 'https://github.com/ishan-web/ecommerce',
+  },
+  {
+    id: 3,
+    image: IMG3,
+    title: 'Ecommerce website for smartphones',
+    github: 'https://github.com/ishan-web/ecommerce',
+    demo: 'https://github.com/ishan-web/ecommerce',
+  },
+  {
+    id: 4,
+    image: IMG4,
+    title: 'Netflix Clone  ',
+    github: 'https://github.com/ishan-web/ecommerce',
+    demo: 'https://github.com/ishan-web/ecommerce',
+  },
+  {
+    id: 5,
+    image: IMG5,
+    title: 'netflix website',
+    github: 'https://github.com/ishan-web/ecommerce',
+    demo: 'https://github.com/ishan-web/ecommerce',
+  },
+  {
+    id: 6,
+    image: IMG6,
+    title: 'Ecommerce website for smartphones',
+    github: 'https://github.com/ishan-web/ecommerce',
+    demo: 'https://github.com/ishan-web/ecommerce',
+  }
+]
+
 
 const Portfolio = () => {
   return (
@@ -16,66 +61,23 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG1} alt="1" />
-          </div>
-          <h3>This is portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/ishan-web/ecommerce" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com/ishan-web/ecommerce" className="btn btn-primary" target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG2} alt="" />
-          </div>
-          <h3>This is portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/ishan-web/ecommerce" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com/ishan-web/ecommerce" className="btn btn-primary" target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG3} alt="" />
-          </div>
-          <h3>This is portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/ishan-web/ecommerce" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com/ishan-web/ecommerce" className="btn btn-primary" target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG4} alt="" />
-          </div>
-          <h3>This is portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/ishan-web/ecommerce" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com/ishan-web/ecommerce" className="btn btn-primary" target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG5} alt="" />
-          </div>
-          <h3>This is portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/ishan-web/ecommerce" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com/ishan-web/ecommerce" className="btn btn-primary" target='_blank'>Live Demo</a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG6} alt="" />
-          </div>
-          <h3>This is portfolio item title</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/ishan-web/ecommerce" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com/ishan-web/ecommerce" className="btn btn-primary" target='_blank'>Live Demo</a>
-          </div>
-        </article>
+         {
+          data.map(({id, image, title, github, demo}) =>{
+           return(
+           <article key={id} className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={image} alt={title} />
+            </div>
+            <h3>{title}</h3>
+            <div className="portfolio__item-cta">
+              <a href={github} className='btn' target='_blank'>Github</a>
+              <a href={demo} className="btn btn-primary" target='_blank'>Live Demo</a>
+            </div>
+          </article>
+           )
+          })
+       }
+
       </div>
     </section>
   )
