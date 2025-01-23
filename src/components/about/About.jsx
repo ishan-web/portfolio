@@ -36,7 +36,7 @@ const about = () => {
               </article>
             </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laudantium ut minus animi reiciendis eius ea at, ipsum voluptatibus nulla! Eligendi dicta ab minima facere officia sint hic at unde.</p>
+            <p>I am a skilled Backend Developer with strong proficiency in Frontend development, enabling me to deliver full-stack solutions with a seamless user experience.</p>
 
             <a href="#contact" className='btn btn-primary'>Let's Talk</a>
           </div>
